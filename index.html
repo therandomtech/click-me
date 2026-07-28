@@ -282,8 +282,22 @@
   .gallery-continue:hover{ background:var(--cream); color:var(--navy); }
 
   /* ================= SCREEN 4: FINAL GREETING ================= */
-  #screen-final{ overflow:hidden; }
-  .final-stage{ position:relative; width:min(640px,100%); text-align:center; z-index:5; }
+  #screen-final{
+    align-items:flex-start;
+    overflow-y:auto;
+    overflow-x:hidden;
+    padding-top:60px;
+    padding-bottom:60px;
+    -webkit-overflow-scrolling:touch;
+  }
+  .final-stage{
+    position:relative;
+    width:min(640px,100%);
+    text-align:center;
+    z-index:5;
+    margin:0 auto;
+    padding:20px 0 60px;
+  }
   .final-glow{
     position:absolute; inset:-30%; z-index:0;
     background:radial-gradient(circle at 50% 40%, rgba(63,167,232,0.25), transparent 60%);
@@ -331,6 +345,22 @@
 
   @media (max-width:640px){
     .frame{ width:130px; }
+
+    #screen-final{
+      padding-top:70px;
+      padding-left:18px;
+      padding-right:18px;
+      padding-bottom:50px;
+    }
+
+    .final-stage{
+      padding-bottom:50px;
+    }
+
+    .final-message{
+      font-size:21px;
+      line-height:1.35;
+    }
   }
 </style>
 </head>
